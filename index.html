@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+        <link href="./asserts/css/dist/bootstrap.min.css" rel="stylesheet">
+        <link href="./asserts/css/fonts.css" rel="stylesheet">
+        <link href="./asserts/css/main.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+    </header>
+    <main class="my-3" id="app">
+        <div class="main-inner container">
+            <div class="card">
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">
+                            Input Teams Log File:
+                        </label>
+                      <input class="form-control" type="file" id="formFile" @change="uploadLog" ref="logFile" title="Choose Log File (Ctrl+O)">
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3">
+                <div class="input-group mb-3" v-for="(row, idx) in tags" v-show="(row !== '') && (logs[idx] !== '-')">
+                    <span class="input-group-text" :id="'tag_'+idx">{{row}}</span>
+                    <textarea class="form-control overflow-y-hidden" v-model="logs[idx]" :aria-label="'tag_'+idx" rows="1" ref="tags" disabled></textarea>
+                </div>
+            </div>
+            <div class="text-end">
+                <button type="button" @click="saveRes" class="ms-2 btn btn-outline-primary" :class="this.filePath === '' ? 'disabled' : ''" title="Save (Ctrl+S)">
+                    Save
+                </button>
+                <button type="button" @click="reloadLog" class="ms-2 btn btn-outline-secondary" :class="this.filePath === '' ? 'disabled' : ''" title="Refresh (F5)">
+                    Refresh
+                </button>
+                <button type="button" @click="clearRes"  class="ms-2 btn btn-outline-danger" :class="this.filePath === '' ? 'disabled' : ''" title="Clear (Ctrl+N)">
+                    Clear                        
+                </button>
+                <input class="form-control d-none" type="file" id="formFile" @change="saveResHandler" ref="savePath" webkitdirectory directory>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-inner container my-2 text-end">
+            <span class="text-body-tertiary">
+                2023 &copy Callum Lu
+            </span>
+        </div>
+    </footer>
+    <!-- You can also require other files to run in this process -->
+    <script src="./asserts/js/renderer.js"></script>
+</body>
+</html>
