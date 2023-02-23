@@ -1,3 +1,7 @@
+const package = require('../package.json')
+const path = require('path')
+const fs = require('fs')
+
 module.exports = {
   packagerConfig: {
     icon: './asserts/img/favicon'
@@ -23,4 +27,23 @@ module.exports = {
       config: {},
     },
   ],
-};
+  hooks: {
+    postMake: (forgeConfig, makeResults) => {
+      console.log(makeResults)
+
+      for (let res of makeResults) {
+        if (res.platform !== 'win32') {
+          continue
+        }
+
+        for (let file of res.artifacts) {
+          if (file.indexOf('.exe') !== -1) {
+            const outFolder = path.dirname(file)
+            const exeFile = `${outFolder}/${package.name}-${package.version}-${res.arch}.exe`
+            fs.renameSync(file, exeFile)
+          }
+        }
+      }
+    }
+  }
+}
