@@ -21,6 +21,9 @@ Checkout [latest release page](https://github.com/luswdev/teams-telemetry-parser
 | MacOS    | Intel (x64)           | Teams.Telemetry.Parser-{version}-x64.dmg       |
 | MacOS    | Apple Silicon (ARM64) | Teams.Telemetry.Parser-{version}-arm64.dmg     |
 | MacOS    | Universal             | Teams.Telemetry.Parser-{version}-universal.dmg |
+| Linux    | x64                   | teams-telemetry-parser_{version}_amd64.deb     |
+| Linux    | ARM64                 | teams-telemetry-parser_{version}_arm64.deb     |
+| Linux    | ARMv7l                | teams-telemetry-parser_{version}_armhf.deb     |
 
 # Build Guide
 
