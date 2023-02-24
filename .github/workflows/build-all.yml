@@ -27,7 +27,7 @@ jobs:
         cache: 'npm'
         
     - name: Cache Dependence
-    - run: npm ci
+      run: npm ci
 
     - name: Build All Architecture App
       run: npm run make -- --arch=all
