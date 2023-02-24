@@ -1,0 +1,33 @@
+name: Test Build All Platform App
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ${{ matrix.operating-systems }}
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+        operating-systems: ['ubuntu-latest', 'windows-latest', 'macos-latest']
+
+    steps:
+    - name: Checkout Latest Code
+      uses: actions/checkout@v3
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+        
+    - name: Cache Dependence
+    - run: npm ci
+
+    - name: Build All Architecture App
+      run: npm run make -- --arch=all
