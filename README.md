@@ -1,11 +1,11 @@
 # Teams Telemetry Parser
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/luswdev/teams-telemetry-parser/macos.yml?label=macOS&logo=apple&logoColor=fff&style=for-the-badge)
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/luswdev/teams-telemetry-parser/windows.yml?label=Windows&logo=windows11&logoColor=fff&style=for-the-badge)
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/luswdev/teams-telemetry-parser/ubuntu.yml?label=Ubuntu&logo=ubuntu&logoColor=fff&style=for-the-badge)\
-![GitHub package.json version](https://img.shields.io/github/package-json/v/luswdev/teams-telemetry-parser?style=for-the-badge)
-![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/luswdev/teams-telemetry-parser?sort=semver&style=for-the-badge)
-![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/luswdev/teams-telemetry-parser/dev/electron?logo=electron&logoColor=fff&style=for-the-badge)\
-![GitHub](https://img.shields.io/github/license/luswdev/teams-telemetry-parser?style=for-the-badge)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/luswdev/teams-telemetry-parser/macos.yml?label=macOS&logo=apple&logoColor=fff)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/luswdev/teams-telemetry-parser/windows.yml?label=Windows&logo=windows11&logoColor=fff)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/luswdev/teams-telemetry-parser/ubuntu.yml?label=Ubuntu&logo=ubuntu&logoColor=fff)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/luswdev/teams-telemetry-parser)
+![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/luswdev/teams-telemetry-parser?sort=semver)
+![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/luswdev/teams-telemetry-parser/dev/electron?logo=electron&logoColor=fff)
+![GitHub](https://img.shields.io/github/license/luswdev/teams-telemetry-parser)
 
 Parsing Team telemetry log to readable content.
 
