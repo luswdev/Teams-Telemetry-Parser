@@ -11,14 +11,16 @@ Parsing Team telemetry log to readable content.
 
 # Installation
 
-| Platform | Architecture | Download Link |
-| - | - | - |
-| Windows | x86 | |
-| Windows | x64 | |
-| Windows | ARM64 | |
-| MacOS | Intel (x64) | |
-| MacOS | Apple Silicon (ARM64) | |
-| MacOS | Universal | |
+Checkout [latest release page](https://github.com/luswdev/teams-telemetry-parser/releases/latest) to download file.
+
+| Platform | Architecture          | File Name                                      |
+| -------- | --------------------- | ---------------------------------------------- |
+| Windows  | x86                   | teams-telemetry-parser-{version}-ia32.exe      |
+| Windows  | x64                   | teams-telemetry-parser-{version}-x64.exe       |
+| Windows  | ARM64                 | teams-telemetry-parser-{version}-arm64.exe     |
+| MacOS    | Intel (x64)           | Teams.Telemetry.Parser-{version}-x64.dmg       |
+| MacOS    | Apple Silicon (ARM64) | Teams.Telemetry.Parser-{version}-arm64.dmg     |
+| MacOS    | Universal             | Teams.Telemetry.Parser-{version}-universal.dmg |
 
 # Build Guide
 
