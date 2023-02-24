@@ -4,7 +4,8 @@ const fs = require('fs')
 
 module.exports = {
   packagerConfig: {
-    icon: './asserts/img/favicon'
+    icon: './asserts/img/favicon',
+    executableName: package.name
   },
   rebuildConfig: {},
   makers: [
