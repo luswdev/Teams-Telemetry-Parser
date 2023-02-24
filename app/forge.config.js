@@ -35,8 +35,6 @@ module.exports = {
   ],
   hooks: {
     postMake: (forgeConfig, makeResults) => {
-      console.log(makeResults)
-
       for (let res of makeResults) {
         if (res.platform !== 'win32') {
           continue
