@@ -143,6 +143,11 @@ module.exports = (_logs) => {
         continue
       }
 
+      if (payload.length <= 1) {
+        console.log('payload too short:', payload.length)
+        break
+      }
+
       const val = getTagVal(tag, payload.slice(1))
       res[tag - 1] = val.str
 
