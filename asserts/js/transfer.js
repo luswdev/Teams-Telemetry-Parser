@@ -148,6 +148,11 @@ module.exports = (_logs) => {
         break
       }
 
+      if (res[tag - 1] !== '-') {
+        console.log('tag already parsed:', tag)
+        break
+      }
+
       const val = getTagVal(tag, payload.slice(1))
       res[tag - 1] = val.str
 
