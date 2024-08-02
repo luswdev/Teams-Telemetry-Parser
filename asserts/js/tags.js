@@ -19,4 +19,11 @@ module.exports = [
   'Connected wireless device change',
   'People count',
   'Local conference count',
+  'Device microphone status',
+  'Device speaker status',
+  'Device audio streams status',
+  'Device video and metadata streams status',
+  'AI model & model version',
+  'Device resource usage',
+  'Voice activity while muted',
 ]

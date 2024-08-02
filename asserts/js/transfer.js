@@ -7,6 +7,12 @@ function getTagVal(_tag, _payload) {
     case 'Endpoint Device Model ID':
     case 'Device Serial Number (endpoint)':
     case 'Error message':
+    case 'Device microphone status':
+    case 'Device speaker status':
+    case 'Device audio streams status':
+    case 'Device video and metadata streams status':
+    case 'AI model & model version':
+    case 'Device resource usage':
       {
         res = String.fromCharCode.apply(null, _payload)
         next = []
@@ -93,6 +99,7 @@ function getTagVal(_tag, _payload) {
       }
     case 'Device Ready':
     case 'Connected wireless device change':
+    case 'Voice activity while muted':
       {
         if (_payload[0] === 1) {
           res = 'Yes'
